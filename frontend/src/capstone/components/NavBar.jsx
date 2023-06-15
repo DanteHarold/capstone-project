@@ -9,7 +9,7 @@ import {
 import { BiExit } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { startLogout } from "../../store/auth";
-
+import { Navigate, Route, Routes, Link as RouterLink } from "react-router-dom";
 export const NavBar = () => {
   const dispatch = useDispatch();
 
@@ -25,11 +25,20 @@ export const NavBar = () => {
       >
         <Grid container flex justifyContent="space-between" alignItems="center">
           <Grid item className="py-4">
-            <Button color="inherit" sx={{ borderBottom: 2 }}>
+            <Button
+              color="inherit"
+              sx={{ borderBottom: 2 }}
+              component={RouterLink}
+              to="/"
+            >
               Inicio
             </Button>
-            <Button color="inherit">Encuesta</Button>
-            <Button color="inherit">Resultados</Button>
+            <Button color="inherit" component={RouterLink} to="/form">
+              Encuesta
+            </Button>
+            <Button color="inherit" component={RouterLink} to="/results">
+              Resultados
+            </Button>
           </Grid>
 
           <IconButton onClick={onLogout}>
