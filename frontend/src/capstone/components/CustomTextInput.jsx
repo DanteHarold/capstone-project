@@ -18,7 +18,7 @@ export const CustomTextInput = (props) => {
           component="span"
           className="text-red-500 text-xs text-opacity-80"
         />
-        <TextField {...field} {...props} fullWidth />
+        <TextField {...field} {...props} fullWidth key="gfddf" />
       </Grid>
     </>
   );

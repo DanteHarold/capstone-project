@@ -9,13 +9,25 @@ import {
   InputLabel,
   Alert,
 } from "@mui/material";
-
+import { useSelector } from "react-redux";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { getInputs } from "../helpers/getInputs";
 import { CustomTextInput } from "../components/CustomTextInput";
+import { useEffect } from "react";
+import { createUser, getAllUsers } from "../../api/user.api";
 
 export const FormView = () => {
   const { initialValues, inputs, validationSchema } = getInputs("form");
+
+  const { displayName, email, uid } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    const loadUsers = async () => {
+      const res = await getAllUsers();
+      console.log(res);
+    };
+    loadUsers();
+  }, []);
 
   return (
     <Grid
@@ -35,8 +47,22 @@ export const FormView = () => {
 
           <Formik
             {...{ initialValues, validationSchema }}
-            onSubmit={(values) => {
-              console.log(values);
+            onSubmit={async (values) => {
+              const res = await createUser({
+                uid,
+                name: displayName,
+                email,
+                rptsDocument: values,
+              });
+
+              console.log(res);
+
+              console.log({
+                uid,
+                name: displayName,
+                email,
+                rptsDocument: values,
+              });
             }}
           >
             {() => (
@@ -44,29 +70,27 @@ export const FormView = () => {
                 noValidate
                 className="animate__animated animate__fadeIn animate__fast "
               >
-                {inputs.map(
-                  ({ name, type, value, label, key, id, ...props }) => {
-                    switch (type) {
-                      default:
-                        return (
-                          <>
-                            <InputLabel
-                              htmlFor={name}
-                              sx={{ mb: 2, whiteSpace: "wrap" }}
-                            >
-                              {label}
-                            </InputLabel>
-                            <CustomTextInput
-                              id={id}
-                              name={name}
-                              placeholder={props.placeholder}
-                              type={type}
-                            />
-                          </>
-                        );
-                    }
+                {inputs.map(({ name, type, value, label, id, ...props }) => {
+                  switch (type) {
+                    default:
+                      return (
+                        <div key={props.key}>
+                          <InputLabel
+                            htmlFor={name}
+                            sx={{ mb: 2, whiteSpace: "wrap" }}
+                          >
+                            {label}
+                          </InputLabel>
+                          <CustomTextInput
+                            id={id}
+                            name={name}
+                            placeholder={props.placeholder}
+                            type={type}
+                          />
+                        </div>
+                      );
                   }
-                )}
+                })}
 
                 <Grid container spacing={2} sx={{ mb: 0, mt: 2 }}>
                   <Grid
@@ -83,7 +107,7 @@ export const FormView = () => {
                       sx={{ backgroundColor: "secondary.main" }}
                     >
                       <Typography sx={{ color: "white", py: 1 }}>
-                        Sign Up
+                        Send
                       </Typography>
                     </Button>
                     {/* </Link> */}

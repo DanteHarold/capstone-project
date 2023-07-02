@@ -20,12 +20,12 @@ const formData = {
 };
 
 const formValidations = {
-  email: [(value) => value.includes("@"), "El Correo debe ser válido"],
+  email: [(value) => value.includes("@"), "Email must be valid"],
   password: [
     (value) => value.length >= 6,
-    "El Password debe de tener mas de 6 letras",
+    "Password must be longer than 6 characters",
   ],
-  displayName: [(value) => value.length >= 1, "El Nombre es Requerido"],
+  displayName: [(value) => value.length >= 1, "Name is Required"],
 };
 
 export const RegisterPage = () => {
@@ -60,7 +60,7 @@ export const RegisterPage = () => {
   };
 
   return (
-    <AuthLayout title="Crear Cuenta">
+    <AuthLayout title="Sign Up">
       <form
         onSubmit={onSubmit}
         className="animate__animated animate__fadeIn animate__fast "
@@ -127,9 +127,9 @@ export const RegisterPage = () => {
           </Grid>
 
           <Grid container direction="row" justifyContent="end">
-            <Typography sx={{ mr: 1 }}>Ya tienes una Cuenta?</Typography>
+            <Typography sx={{ mr: 1 }}>Have an account??</Typography>
             <Link component={RouterLink} color="inherit" to="/auth/login">
-              Ingresar
+              Sign In
             </Link>
           </Grid>
         </Grid>

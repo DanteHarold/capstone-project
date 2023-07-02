@@ -21,13 +21,13 @@ export const NoteView = () => {
           className="flex-col justify-center items-center w-full sm:w-3/4 md:w-3/5 px-0 sm:px-0 md:px-0 xl:px-10 "
         >
           <Typography variant="h5" textAlign="center" sx={{ mb: 2 }}>
-            ¿ De que Trata ?
+            What's it about
           </Typography>
           <Grid
             item
             className="flex justify-center items-center self-center text-md lg:text-lg"
           >
-            Estimado {displayName}
+            Hi {displayName}
             {message.title}
           </Grid>
         </Grid>

@@ -119,7 +119,7 @@ export const LoginPage = () => {
               to="/auth/register"
               sx={{ mt: 3 }}
             >
-              Crear una Cuenta
+              Sign Up
             </Link>
           </Grid>
         </Grid>

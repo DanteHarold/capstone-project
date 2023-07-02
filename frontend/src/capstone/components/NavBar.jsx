@@ -31,13 +31,13 @@ export const NavBar = () => {
               component={RouterLink}
               to="/"
             >
-              Inicio
+              Home
             </Button>
             <Button color="inherit" component={RouterLink} to="/form">
-              Encuesta
+              Questions
             </Button>
             <Button color="inherit" component={RouterLink} to="/results">
-              Resultados
+              Results
             </Button>
           </Grid>
 
