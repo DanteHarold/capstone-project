@@ -86,7 +86,7 @@ export const LoginPage = () => {
               fullWidth
               sx={{ backgroundColor: "secondary.main" }}
             >
-              <Typography sx={{ color: "white", py: 1 }}>Sign In</Typography>
+              <Typography sx={{ color: "white", py: 1 }}>iniciar sesión</Typography>
             </Button>
             {/* </Link> */}
           </Grid>
@@ -119,7 +119,7 @@ export const LoginPage = () => {
               to="/auth/register"
               sx={{ mt: 3 }}
             >
-              Sign Up
+              Crear una cuenta
             </Link>
           </Grid>
         </Grid>

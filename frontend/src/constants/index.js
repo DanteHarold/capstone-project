@@ -1,17 +1,17 @@
 export const message = {
   id: "message",
   title:
-    ", Thank you for participating in this quiz on femicide! Your opinion and perspective are of great importance to better understand this social problem that affects women all over the world. Feminicide is an extreme form of gender violence that carries devastating consequences for the victims and their communities.This questionnaire aims to obtain valuable information on perceptions, knowledge and attitudes related to femicide.",
-  title2: "Violence Test  CUVINO",
+    ", ¡Gracias por participar en este test sobre feminicidio! Tu opinión y perspectiva son de gran importancia para comprender mejor este problema social que afecta a las mujeres en todo el mundo. El feminicidio es una forma extrema de violencia de género que conlleva consecuencias devastadoras para las víctimas y sus comunidades. Este cuestionario tiene como objetivo obtener información valiosa sobre las percepciones, conocimientos y actitudes relacionadas con el feminicidio.",
+  title2: "Test de Violencia",
   subtitle:
-    "This survey is anonymous and the answers will be analyzed together, so that the data of no one in particular will be known.In this sense, to answer the survey, think of a relationship(that you have maintained, at least, for a month or more).With this in mind, please answer the following questions honestly.",
+    "Esta encuesta es anónima y las respuestas se analizarán en conjunto, por lo que no se conocerán los datos de nadie en particular. En este sentido, para responder la encuesta, piensa en una relación (que estés, hayas mantenido, al menos, durante un mes o más). En relación a esto, responda las siguientes preguntas con sinceridad.",
 };
 
 export const forms = {
   form: [
     {
       label:
-        "1. Does he impose rules on you about the relationship according to his exclusive convenience? If your answer is yes, what are they?",
+        "1. ¿Impone reglas sobre la relación (días, horarios, tipos de salidas), de acuerdo con su conveniencia exclusiva? Si tu respuesta es sí, ¿cuáles son?",
       type: "text",
       name: "p1",
       id: "p1",
@@ -32,7 +32,7 @@ export const forms = {
     },
     {
       label:
-        "2. Is he constantly and violently jealous of you? If your answer is yes. How does he do it?",
+        "2. ¿Es celoso con usted en forma constante y violenta? Si tu respuesta es sí. ¿Cómo lo hace?",
       type: "text",
       name: "p2",
       id: "p2",
@@ -53,7 +53,7 @@ export const forms = {
     },
     {
       label:
-        "3. Has he joked or debunked your womanhood, if your answer is yes. How does he do it?",
+        "3. ¿Ha bromeado o desprestigiado tu condición de mujer?, ¿De qué manera?",
       type: "text",
       name: "p3",
       id: "p3",
@@ -74,7 +74,7 @@ export const forms = {
     },
     {
       label:
-        "4. Has he ignored your feelings? If your answer is yes, how does he do it?",
+        "4. ¿Ha ignorado tus sentimientos? Si tu respuesta es sí, ¿cómo lo hace?",
       type: "text",
       name: "p4",
       id: "p4",
@@ -95,7 +95,7 @@ export const forms = {
     },
     {
       label:
-        "5. He criticizes you, insults you or yells at you?. If your answer is yes, how does he do it?",
+        "5. ¿Te critica, te insulta o te grita en presencia de amigos o familiares?. Si tu respuesta es sí, ¿Cómo lo hace?",
       type: "text",
       name: "p5",
       id: "p5",
@@ -116,7 +116,7 @@ export const forms = {
     },
     {
       label:
-        "6. He thinks that women are inferior and says that they must obey men. If your answer is yes, how does he do it?",
+        "6. ¿Te sientes obligada/o a mantener sexo? Si respondió SI, ¿De qué manera?",
       type: "text",
       name: "p6",
       id: "p6",
@@ -137,7 +137,7 @@ export const forms = {
     },
     {
       label:
-        "7. Has he hit you, pushed you or any other form of aggression? If your answer is yes, how does he do it?",
+        "7. ¿Te ha golpeado, empujado o cualquier otra forma de agresión? Si tu respuesta es sí, ¿Cómo lo hace?",
       type: "text",
       name: "p7",
       id: "p7",
@@ -158,7 +158,7 @@ export const forms = {
     },
     {
       label:
-        "8. He humiliates you in public, if your answer is yes, how does he do it?",
+        "8. ¿Te humilla en público?",
       type: "text",
       name: "p8",
       id: "p8",
