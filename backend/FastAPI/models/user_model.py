@@ -31,7 +31,7 @@ class Rpts(BaseModel):
 
 #* Entidad User
 class User(BaseModel):
-    id: Optional[PyObjectId] = Field(alias="_id")
+#   id: Optional[PyObjectId] = Field(alias="_id")
     uid: str
     name: str
     email : str

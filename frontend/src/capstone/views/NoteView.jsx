@@ -3,6 +3,7 @@ import { mujer, woman } from "../../assets";
 import { message } from "../../constants";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import { useNavigate, Link } from "react-router-dom";
 export const NoteView = () => {
   const { displayName } = useSelector((state) => state.auth);
 
@@ -42,7 +43,7 @@ export const NoteView = () => {
         item
         className=" sm:px-20 md:px-36 lg:px-32  flex justify-between items-center w-full pt-10 "
       >
-        <Grid item>
+        {/* <Grid item>
           <Button
             variant="contained"
             fullWidth
@@ -51,12 +52,15 @@ export const NoteView = () => {
             <BsArrowLeft className="text-white text-2xl " />
             <Typography sx={{ ml: 1, py: 1, color: "white" }}>Back</Typography>
           </Button>
-        </Grid>
+        </Grid> */}
+
         <Grid item>
           <Button
             variant="contained"
             fullWidth
             sx={{ backgroundColor: "secondary.main" }}
+            component={Link}
+            to="/form"
           >
             <Typography sx={{ ml: 1, py: 1, color: "white" }}>Next</Typography>
             <BsArrowRight className="ms-1 text-white text-2xl " />

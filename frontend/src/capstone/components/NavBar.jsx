@@ -9,9 +9,18 @@ import {
 import { BiExit } from "react-icons/bi";
 import { useDispatch } from "react-redux";
 import { startLogout } from "../../store/auth";
-import { Navigate, Route, Routes, Link as RouterLink } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  Routes,
+  Link as RouterLink,
+  useNavigate,
+  useLocation,
+} from "react-router-dom";
 export const NavBar = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
+  console.log("PATH", location.pathname);
 
   const onLogout = () => {
     dispatch(startLogout());

@@ -1,3 +1,6 @@
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
 import * as Yup from "yup";
 import { useFormik, Formik, Form } from "formik";
 import {
@@ -15,11 +18,15 @@ import { getInputs } from "../helpers/getInputs";
 import { CustomTextInput } from "../components/CustomTextInput";
 import { useEffect } from "react";
 import { createUser, getAllUsers } from "../../api/user.api";
+import { message } from "../../constants";
+import { useNavigate } from "react-router-dom";
 
 export const FormView = () => {
   const { initialValues, inputs, validationSchema } = getInputs("form");
 
   const { displayName, email, uid } = useSelector((state) => state.auth);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadUsers = async () => {
@@ -38,6 +45,22 @@ export const FormView = () => {
       alignItems="center"
       sx={{ mb: 1, px: 6 }}
     >
+      <Grid
+        item
+        alignItems="center"
+        className="font-semibold text-zinc-600 text-4xl text-center "
+        sx={{ mb: 4, px: 6, mx: "auto" }}
+      >
+        {message.title2}
+      </Grid>
+      <Grid
+        alignItems="center"
+        className="font-semibold text-zinc-600  xl:text-lg xl:px-10"
+        sx={{ mb: 4 }}
+      >
+        {message.subtitle}
+      </Grid>
+
       <Grid item className="flex justify-center items-center">
         <Grid
           item
@@ -48,6 +71,17 @@ export const FormView = () => {
           <Formik
             {...{ initialValues, validationSchema }}
             onSubmit={async (values) => {
+              const MySwal = withReactContent(Swal);
+
+              MySwal.fire({
+                position: "center",
+                icon: "success",
+                title: "Good Job",
+                confirmButtonText: "Ok",
+              }).then(() => {
+                navigate("/");
+              });
+
               const res = await createUser({
                 uid,
                 name: displayName,

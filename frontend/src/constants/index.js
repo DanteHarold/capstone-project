@@ -2,6 +2,9 @@ export const message = {
   id: "message",
   title:
     ", Thank you for participating in this quiz on femicide! Your opinion and perspective are of great importance to better understand this social problem that affects women all over the world. Feminicide is an extreme form of gender violence that carries devastating consequences for the victims and their communities.This questionnaire aims to obtain valuable information on perceptions, knowledge and attitudes related to femicide.",
+  title2: "Violence Test  CUVINO",
+  subtitle:
+    "This survey is anonymous and the answers will be analyzed together, so that the data of no one in particular will be known.In this sense, to answer the survey, think of a relationship(that you have maintained, at least, for a month or more).With this in mind, please answer the following questions honestly.",
 };
 
 export const forms = {
@@ -71,7 +74,7 @@ export const forms = {
     },
     {
       label:
-        "4.Has he ignored your feelings? If your answer is yes, how does he do it?",
+        "4. Has he ignored your feelings? If your answer is yes, how does he do it?",
       type: "text",
       name: "p4",
       id: "p4",
@@ -92,7 +95,7 @@ export const forms = {
     },
     {
       label:
-        "He criticizes you, insults you or yells at you?. If your answer is yes, how does he do it?",
+        "5. He criticizes you, insults you or yells at you?. If your answer is yes, how does he do it?",
       type: "text",
       name: "p5",
       id: "p5",
@@ -113,7 +116,7 @@ export const forms = {
     },
     {
       label:
-        "6.He thinks that women are inferior and says that they must obey men. If your answer is yes, how does he do it?",
+        "6. He thinks that women are inferior and says that they must obey men. If your answer is yes, how does he do it?",
       type: "text",
       name: "p6",
       id: "p6",
@@ -134,7 +137,7 @@ export const forms = {
     },
     {
       label:
-        "7.Has he hit you, pushed you or any other form of aggression? If your answer is yes, how does he do it?",
+        "7. Has he hit you, pushed you or any other form of aggression? If your answer is yes, how does he do it?",
       type: "text",
       name: "p7",
       id: "p7",
