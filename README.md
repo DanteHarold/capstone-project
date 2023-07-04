@@ -1,7 +1,7 @@
 # capstone-project
 
-```npm i 
+`npm i 
 
 cd frontend/
 
-npm run dev```
+npm run dev`
