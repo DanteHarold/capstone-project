@@ -1,9 +1,9 @@
 ##Capstone-Project
 
 ```
-    npm i
-
     cd frontend/
+
+    npm i
 
     npm run dev
 
